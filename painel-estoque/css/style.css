@@ -6,39 +6,37 @@
     box-sizing: border-box;
 }
 
-html, body {
-    font-family: 'Roboto', sans-serif;
-
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+html, body {font-family: 'Roboto', sans-serif;}
 
 body {
+    width: 100%;
+    height: 100%;
     background-color: #104c6c;
 }
 
-#titulo {
-    color: #FFF;
-}
+#titulo {color: #FFF;}
 
 .bloco-principal {
+    display: grid;
+    grid-template-areas:
+        "cards cards cards cards"
+        "menu-principal dashboards dashboards dashboards";
+    gap: 4px;
+    padding: 4px;
     background-color: #FFF;
-    width: 100%;
-    height: 100%;
 }
 
 .bloco-menu {
-    background-color: #104c6c;
+    grid-area: menu-principal;
+    background-color: #2cb5ff;
 }
 
 .bloco-cards {
-    background-color: #104c6c;
+    grid-area: cards;
+    background-color: #446c10;
 }
 
 .bloco-dashboards {
-    background-color: #104c6c;
+    grid-area: dashboards;
+    background-color: #a12e2e;
 }
