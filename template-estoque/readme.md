@@ -1,0 +1,1 @@
+- Modelo de template para estoques
