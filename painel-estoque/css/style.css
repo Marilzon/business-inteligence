@@ -11,16 +11,21 @@ html, body {font-family: 'Roboto', sans-serif;}
 body {
     width: 100%;
     height: 100%;
-    background-color: #104c6c;
+    background-color: #4b545c;
 }
 
-#titulo {color: #FFF;}
+#titulo {
+    width: 100%;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+}
 
 .bloco-principal {
     display: grid;
     grid-template-areas:
-        "cards cards cards cards"
-        "menu-principal dashboards dashboards dashboards";
+        "cards cards cards cards cards cards"
+        "menu-principal dashboards dashboards dashboards dashboards dashboards";
     gap: 4px;
     padding: 4px;
     background-color: #FFF;
@@ -32,8 +37,21 @@ body {
 }
 
 .bloco-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
+    gap: 4px;
+    padding: 0 4px;
+
     grid-area: cards;
     background-color: #446c10;
+}
+
+.card {
+    border-radius: 1px;
+    padding: .5rem;
+    margin: 4px 0;
+    background-color: #FFF;
 }
 
 .bloco-dashboards {
